@@ -81,7 +81,7 @@
             <entry key="superUser.password" value="jahia_root"/>
             <entry key="superUser.firstname" value="your_first_name"/>
             <entry key="superUser.lastname" value="your_last_name"/>
-            <entry key="superUser.email" value="your_email"/>
+            <entry key="superUser.email" value="dcfran@yahoo.com"/>
             <entry key="superUser.preferredLang" value="en"/>
         </userInput>
     </com.izforge.izpack.panels.UserInputPanel>

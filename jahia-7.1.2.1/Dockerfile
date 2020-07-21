@@ -19,7 +19,7 @@ RUN yum -y update && yum -y install \
 RUN rm -rf /var/lib/apt/lists/*
 
 # Download Maven 3
-RUN wget -q http://www-eu.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz -O /tmp/apache-maven-3.5.2-bin.tar.gz
+RUN wget -q http://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz -O /tmp/apache-maven-3.5.2-bin.tar.gz
 RUN tar xzf /tmp/apache-maven-3.5.2-bin.tar.gz -C /usr/share
 
 # Set Maven and JPDA environment variables
@@ -37,7 +37,7 @@ ENV JAVA_OPTS="-agentpath:/usr/local/jrebel/libjrebel64.so -Drebel.remoting_plug
 RUN wget -q https://www.jahia.com/downloads/jahia/digitalexperiencemanager7.1.2/DigitalExperienceManager-EnterpriseDistribution-7.1.2.1-r54750.3813.jar -O /tmp/DigitalExperienceManager.jar
 
 # Download MySQL connector
-RUN wget -q http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar -O /usr/lib/mysql-connector-java-5.1.35.jar
+RUN wget -q https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.35/mysql-connector-java-5.1.35.jar -O /usr/lib/mysql-connector-java-5.1.35.jar
 
 # Copy local files to container so they can be executed later on container run
 COPY jahia-7.1.2.1/install.sh /tmp/install.sh
